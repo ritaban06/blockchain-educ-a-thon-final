@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
+
 
 function App() {
   useEffect(() => {
@@ -27,6 +29,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Analytics />
     </div>
   );
 }
