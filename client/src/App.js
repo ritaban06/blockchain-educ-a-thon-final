@@ -1,7 +1,16 @@
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    // Check if this is a direct page load (not an internal navigation)
+    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_NAVIGATE) {
+      // Replace this URL with your YouTube video URL
+      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    }
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
